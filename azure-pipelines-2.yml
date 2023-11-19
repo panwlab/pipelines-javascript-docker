@@ -58,5 +58,5 @@ stages:
       inputs:
         scanType: 'images'
         twistlockService: 'Prisma Cloud'
-        artifact: 'dachenpanw / ignite2023_docker:$(Build.BuildId)'
+        artifact: 'dachenpanw/ignite2023_docker:$(Build.BuildId)'
       displayName: "Scanning Docker Images"
