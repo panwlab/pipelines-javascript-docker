@@ -28,7 +28,7 @@ stages:
       displayName: 'Prepare python environment'
     - script: pip install checkov
       displayName: 'Install Checkov'
-    - script: checkov -d . --use-enforcement-rules --bc-api-key $(bc-api-key) --repo-id ignite/code-checking --branch main -o cli -o junitxml --output-file-path console,CheckovReport.xml --quiet --compact
+    - script: checkov -d . --use-enforcement-rules --bc-api-key 51abb0f6-7507-4832-98a8-9af3f67dd27b::KZTtRnabzc0xj3H6uN57y5aqVmo= --repo-id ignite2023/IgniteDemo --branch main -o cli -o junitxml --output-file-path console,CheckovReport.xml --quiet --compact
       displayName: 'Scan with Prisma Cloud'
       env:
         PRISMA_API_URL: https://api.sg.prismacloud.io
