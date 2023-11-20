@@ -2,8 +2,8 @@
 
 # FROM node:12.18.1
 # FROM node:16.13.2
-# FROM node:20.8.0
-FROM node:21.1.0
+FROM node:20.8.0
+# FROM node:21.2.0
 ENV NODE_ENV=production
 
 WORKDIR /app
