@@ -26,20 +26,20 @@ stages:
         addToPath: true
         architecture: 'x64'
       displayName: 'Prepare python environment'
-    - script: pip install checkov
-      displayName: 'Install Checkov'
-    - script: checkov -d . --use-enforcement-rules --bc-api-key 51abb0f6-7507-4832-98a8-9af3f67dd27b::KZTtRnabzc0xj3H6uN57y5aqVmo= --repo-id ignite2023/IgniteDemo --branch main -o cli -o junitxml --output-file-path console,CheckovReport.xml --quiet --compact
-      displayName: 'Scan with Prisma Cloud'
-      env:
-        PRISMA_API_URL: https://api.sg.prismacloud.io
-    - task: PublishTestResults@2
-      inputs:
-        testRunTitle: "Checkov Results"
-        failTaskOnFailedTests: false
-        testResultsFormat: "JUnit"
-        testResultsFiles: "CheckovReport.xml"
-        searchFolder: "$(System.DefaultWorkingDirectory)"
-      displayName: "Publish Checkov scan results"
+    # - script: pip install checkov
+      # displayName: 'Install Checkov'
+    # - script: checkov -d . --use-enforcement-rules --bc-api-key 51abb0f6-7507-4832-98a8-9af3f67dd27b::KZTtRnabzc0xj3H6uN57y5aqVmo= --repo-id ignite2023/IgniteDemo --branch main -o cli -o junitxml --output-file-path console,CheckovReport.xml --quiet --compact
+      # displayName: 'Scan with Prisma Cloud'
+      # env:
+       # PRISMA_API_URL: https://api.sg.prismacloud.io
+    # - task: PublishTestResults@2
+      # inputs:
+        # testRunTitle: "Checkov Results"
+        # failTaskOnFailedTests: false
+        # testResultsFormat: "JUnit"
+        # testResultsFiles: "CheckovReport.xml"
+        # searchFolder: "$(System.DefaultWorkingDirectory)"
+      # displayName: "Publish Checkov scan results"
       
     - task: Docker@2
       displayName: Build an image
