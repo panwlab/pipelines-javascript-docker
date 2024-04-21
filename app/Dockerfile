@@ -4,7 +4,7 @@
 # FROM node:16.13.2
 # FROM node:20.8.0
 # FROM node:21.2.0
-FROM ubuntu:latest
+FROM ubuntu/apache2:latest
 
 # ENV NODE_ENV=production
 
