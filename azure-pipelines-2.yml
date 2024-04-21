@@ -54,9 +54,9 @@ stages:
         repository: 'dachenpanw/ignite2023_docker'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
-    - task: prisma-cloud-compute-scan@3
-      inputs:
-        scanType: 'images'
-        twistlockService: 'Prisma Cloud'
-        artifact: 'dachenpanw/ignite2023_docker:$(Build.BuildId)'
-      displayName: "Scanning Docker Images"
+    # - task: prisma-cloud-compute-scan@3
+      # inputs:
+        # scanType: 'images'
+        # twistlockService: 'Prisma Cloud'
+        # artifact: 'dachenpanw/ignite2023_docker:$(Build.BuildId)'
+      # displayName: "Scanning Docker Images"
