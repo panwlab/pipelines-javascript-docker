@@ -14,7 +14,7 @@ FROM ubuntu/apache2:latest
 
 # RUN npm install --production
 RUN apt-get update && apt-get install -y iputils-ping
-RUN RUN apk add --no-cache curl
+RUN apk add --no-cache curl
 
 # COPY . .
 
