@@ -3,16 +3,19 @@
 # FROM node:12.18.1
 # FROM node:16.13.2
 # FROM node:20.8.0
-FROM node:21.2.0
-ENV NODE_ENV=production
+# FROM node:21.2.0
+FROM ubuntu:latest
 
-WORKDIR /app
+# ENV NODE_ENV=production
 
-COPY ["package.json", "package-lock.json*", "./"]
+# WORKDIR /app
 
-RUN npm install --production
+# COPY ["package.json", "package-lock.json*", "./"]
 
-COPY . .
+# RUN npm install --production
+RUN apt-get update && apt-get install -y iputils-ping
+
+# COPY . .
 
 EXPOSE 8080
-CMD [ "node", "server.js" ]
+# CMD [ "node", "server.js" ]
