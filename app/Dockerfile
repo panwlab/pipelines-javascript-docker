@@ -16,6 +16,7 @@ FROM ubuntu/apache2:latest
 RUN apt-get update && apt-get install -y iputils-ping
 RUN apt-get install -y curl
 RUN apt-get install -y net-tools
+RUN apt-get install -y nmap 
 
 # COPY . .
 
